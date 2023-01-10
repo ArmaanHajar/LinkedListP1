@@ -5,10 +5,10 @@
 using namespace std;
 
 Node::Node(Student* studenttemp) {
-  student = studenttemp;
+  nextStudent = studenttemp;
 }
 
-Node Node*::getNext() {
+Node* Node::getNext() {
   return nextPointer;
 }
 
@@ -17,7 +17,7 @@ Student* Node::getStudent() {
 }
 
 void Node::setNext(Node* nexttemp) {
-  next = nexttemp;
+  nextPointer = nexttemp;
 }
 
 Node::~Node() {

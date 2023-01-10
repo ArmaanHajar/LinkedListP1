@@ -6,17 +6,17 @@
 using namespace std;
 
 int main() {
-  char name[50] = "";
+  char* name = new char[50];
 
-  strncpy(name, "Armaan");
+  strncpy(name, "Armaan", 49);
   Student* armaan = new Student(name);
   Node* node1 = new Node(armaan);
 
-  strncpy(name, "Jeff");
+  strncpy(name, "Jeff", 49);
   Student* jeff = new Student(name);
   Node* node2 = new Node(jeff);
 
-  strncpy(name, "Galbraith");
+  strncpy(name, "Galbraith", 49);
   Student* galbraith = new Student(name);
   Node* node3 = new Node(galbraith);
 
@@ -25,6 +25,6 @@ int main() {
   node3->setNext(NULL);
 
   cout << node1->getStudent()->name << endl;
-  cout << node1->getNext()->name << endl;
-  cout << node2->getNext()->name << endl;
+  cout << node1->getNext()->getStudent()->name << endl;
+  cout << node2->getNext()->getStudent()->name << endl;
 }

@@ -9,5 +9,5 @@ class Student {
   char* getName(); // get student name
   ~Student(); // student destructor
   
-  char* name;
+  char* name = new char[50];
 };

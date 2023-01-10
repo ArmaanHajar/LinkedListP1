@@ -12,6 +12,6 @@ class Node {
   void setNext(Node*); // set next corresponding node pointer
   ~Node(); // node destructor
 
-  Student* student;
-  Node* node;
-}
+  Student* nextStudent;
+  Node* nextPointer;
+};

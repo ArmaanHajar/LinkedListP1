@@ -5,7 +5,6 @@
 using namespace std;
 
 Student::Student(char* nametemp) {
-  name = new name[50];
   strncpy(name, nametemp, 49);
 }
 
